@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spoonify - Recipe Finder</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://img.icons8.com/ios-filled/50/ffffff/spoon.png">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/spoon.png" alt="Spoonify Logo">
+      <span>Spoonify</span>
+    </div>
+
+    <!-- Search -->
+    <form id="search-form" class="search-form">
+      <input type="text" id="search-input" placeholder="Search recipes...">
+      <button type="submit">Search</button>
+    </form>
+
+    <!-- Links -->
+    <ul class="nav-links">
+      <li><a href="#" id="homeLink">Home</a></li>
+      <li><a href="#" id="savedLink">Saved (<span id="savedCount">0</span>)</a></li>
+
+      <!-- Auth Section -->
+      <li id="authMenu">
+        <!-- Login (when logged out) -->
+        <div id="authLinks">
+          <a href="index.html" id="loginLink">Login</a> | 
+          <a href="signin.html" id="signupLink">Sign up</a>
+        </div>
+
+        <!-- Profile (when logged in) -->
+        <div id="profileMenu" class="profile hidden">
+          <img id="profilePic" src="https://via.placeholder.com/40" alt="Profile">
+          <span id="profileName"></span>
+          <div class="dropdown hidden" id="dropdownMenu">
+            <p id="profileEmail"></p>
+            <button id="logoutBtn">🚪 Logout</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+    <h1 class="page-title">Discover Recipes</h1>
+    <div id="meal-container" class="meal-grid"></div>
+
+    <!-- Saved Recipes -->
+    <h2 class="page-title">My Saved Recipes</h2>
+    <div id="saved-container" class="meal-grid"></div>
+  </main>
+
+  <!-- JS -->
+  <script src="app.js"></script>
+  <script type="module" src="auth.js"></script>
+</body>
+</html>
