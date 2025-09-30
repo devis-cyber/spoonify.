@@ -33,7 +33,7 @@ if (signupForm) {
     createUserWithEmailAndPassword(auth, email, password)
       .then(() => {
         alert("✅ Account created!");
-        window.location.href = "index.html";
+        window.location.href = "login.html";
       })
       .catch((error) => alert(error.message));
   });
@@ -86,6 +86,7 @@ onAuthStateChanged(auth, (user) => {
     if (profileMenu) profileMenu.style.display = "none";
   }
 });
+
 
 
 
